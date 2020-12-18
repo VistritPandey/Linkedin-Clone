@@ -6,7 +6,10 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <img src="" alt="" />
+        <img
+          src="https://www.costacruises.com/content/dam/costa/inventory-assets/countries/IND/IND.jpg.image.750.563.low.jpg"
+          alt=""
+        />
         <Avatar
           className="sidebar__avatar"
           src="https://lh3.googleusercontent.com/ogw/ADGmqu9jlTtiVnYKEPl0kL5mXmjMil3nzlUpJ1XwTZpZ5g=s192-c-mo"
