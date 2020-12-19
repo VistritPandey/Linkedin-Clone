@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Feed.css";
 import CreateIcon from "@material-ui/icons/Create";
 import InputOption from "./InputOption";
@@ -7,9 +7,34 @@ import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from "./Post";
+import { db } from "./Firebase";
+import firebase from "firebase";
 
 function Feed() {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) =>
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      )
+    );
+  }, []);
+
+  const sendPost = (e) => {
+    e.preventDefault();
+    db.collection("posts").add({
+      name: "Vistrit",
+      description: "Test description hai mere bhai",
+      message: input,
+      photoUrl: "",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+  };
 
   return (
     <div className="feed">
@@ -17,8 +42,13 @@ function Feed() {
         <div className="feed__input">
           <CreateIcon />
           <form>
-            <input type="text" placeholder="Post something" />
-            <button className="light" type="submit">
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              type="text"
+              placeholder="Post something"
+            />
+            <button onClick={sendPost} className="light" type="submit">
               Post
             </button>
           </form>
@@ -34,14 +64,15 @@ function Feed() {
           />
         </div>
       </div>
-      {posts.map((post) => (
-        <Post />
+      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+        <Post
+          key={id}
+          name={name}
+          description={description}
+          message={message}
+          photoUrl={photoUrl}
+        />
       ))}
-      <Post
-        name="Vistrit Pandey"
-        description="Test OP Bolte"
-        message="Gaadi wala aaya ghar se kachda nikal"
-      />
     </div>
   );
 }
