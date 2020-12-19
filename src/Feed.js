@@ -34,6 +34,9 @@ function Feed() {
           />
         </div>
       </div>
+      {posts.map((post) => (
+        <Post />
+      ))}
       <Post
         name="Vistrit Pandey"
         description="Test OP Bolte"
