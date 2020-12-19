@@ -38,3 +38,8 @@
     border-radius: 10px;
     background-color: lightblue;
 }
+
+.feed__inputOptions {
+    display: flex;
+    justify-content: space-evenly;
+}
