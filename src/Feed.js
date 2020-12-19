@@ -29,11 +29,13 @@ function Feed() {
     e.preventDefault();
     db.collection("posts").add({
       name: "Vistrit",
-      description: "Test description hai mere bhai",
+      description: "STONKS!!!!!!",
       message: input,
-      photoUrl: "",
+      photoUrl:
+        "https://lh3.googleusercontent.com/ogw/ADGmqu9jlTtiVnYKEPl0kL5mXmjMil3nzlUpJ1XwTZpZ5g=s192-c-mo",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
+    setInput("");
   };
 
   return (
