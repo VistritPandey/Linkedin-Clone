@@ -22,7 +22,7 @@ function Sidebar() {
           src="https://lh3.googleusercontent.com/ogw/ADGmqu9jlTtiVnYKEPl0kL5mXmjMil3nzlUpJ1XwTZpZ5g=s192-c-mo"
         />
         <h2>Vistrit Pandey</h2>
-        <h4>vistritpandey@gmail.com</h4>
+        <h4>Mobile Developer at MSA</h4>
       </div>
       <div className="sidebar__stats">
         <div className="sidebar__stat">
