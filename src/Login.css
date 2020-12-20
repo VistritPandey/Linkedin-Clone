@@ -1,0 +1,15 @@
+.login {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+.login > img{
+    display: flex;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -4,7 +4,13 @@ import "./Login.css";
 function Login() {
   return (
     <div className="login">
-      <h1>Login</h1>
+      <img
+        src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2011%E2%80%932019.png"
+        alt=""
+      />
+      <fomr>
+        <input placeholder="username" type="text" />
+      </fomr>
     </div>
   );
 }
