@@ -33,10 +33,10 @@ function Feed() {
   const sendPost = (e) => {
     e.preventDefault();
     db.collection("posts").add({
-      name: "test",
+      name: user.email,
       description: "description",
       message: input,
-      photoUrl: "",
+      photoUrl: user.photoUrl,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setInput("");

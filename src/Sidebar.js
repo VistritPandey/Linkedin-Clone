@@ -1,6 +1,7 @@
 import { Avatar, Button } from "@material-ui/core";
 import React from "react";
 import "./Sidebar.css";
+import { auth } from "./Firebase";
 
 function Sidebar() {
   const recentItem = (topic) => (
@@ -39,7 +40,14 @@ function Sidebar() {
         {recentItem("Technology")}
       </div>
       <div className="sidebar__logout">
-        <Button> Logout </Button>
+        <Button
+          onClick={() => {
+            auth.signOut();
+          }}
+        >
+          {" "}
+          Logout{" "}
+        </Button>
       </div>
     </div>
   );
