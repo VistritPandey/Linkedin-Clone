@@ -22,9 +22,8 @@ function Sidebar() {
           src="https://www.costacruises.com/content/dam/costa/inventory-assets/countries/IND/IND.jpg.image.750.563.low.jpg"
           alt=""
         />
-        <Avatar className="sidebar__avatar" src="" />
-        <h2>Name goes here</h2>
-        <h4>Description goes here</h4>
+        <Avatar className="sidebar__avatar" src={user.photoUrl} />
+        <h2>{user.email}</h2>
       </div>
       <div className="sidebar__stats">
         <div className="sidebar__stat">
