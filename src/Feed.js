@@ -7,10 +7,13 @@ import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from "./Post";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 import { db } from "./Firebase";
 import firebase from "firebase";
 
 function Feed() {
+  const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
@@ -30,7 +33,7 @@ function Feed() {
   const sendPost = (e) => {
     e.preventDefault();
     db.collection("posts").add({
-      name: "Dummy",
+      name: "test",
       description: "description",
       message: input,
       photoUrl: "",

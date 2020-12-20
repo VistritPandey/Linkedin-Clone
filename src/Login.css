@@ -3,7 +3,7 @@
     place-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 100px;
 }
 
@@ -13,3 +13,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.login > button {
+    width: 300px;
+    background-color: lightblue;
+    color: #eff2f5;
+    font-weight: 800;
+  }
