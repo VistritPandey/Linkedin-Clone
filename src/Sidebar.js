@@ -23,7 +23,8 @@ function Sidebar() {
           alt=""
         />
         <Avatar className="sidebar__avatar" src={user.photoUrl} />
-        <h2>{user.email}</h2>
+        <h2>{user.displayName}</h2>
+        <h4>{user.email}</h4>
       </div>
       <div className="sidebar__stats">
         <div className="sidebar__stat">
