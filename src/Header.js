@@ -7,8 +7,11 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import { selectUser } from "./features/userSlice";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const user = useSelector(selectUser);
   return (
     <div className="header">
       <div className="header__left">
@@ -29,7 +32,7 @@ function Header() {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption avatar="" title="me" />
+        <HeaderOption avatar={user.photoUrl} title="me" />
       </div>
     </div>
   );

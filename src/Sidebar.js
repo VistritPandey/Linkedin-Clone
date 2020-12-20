@@ -2,8 +2,12 @@ import { Avatar, Button } from "@material-ui/core";
 import React from "react";
 import "./Sidebar.css";
 import { auth } from "./Firebase";
+import { selectUser } from "./features/userSlice";
+import { useSelector } from "react-redux";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+
   const recentItem = (topic) => (
     <div className="sidebar__recentItem">
       <span className="sidebar__hash">#</span>
