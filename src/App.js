@@ -11,7 +11,6 @@ import { auth } from "./Firebase";
 
 function App() {
   const user = useSelector(selectUser);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function App() {
             id: authUser.id,
             photo: authUser.photoURL,
             email: authUser.email,
-            displayname: authUser.displayname,
+            displayName: authUser.displayName,
           })
         );
       } else {
@@ -34,6 +33,8 @@ function App() {
   return (
     <div className="app">
       {!user ? (
+        <Login />
+      ) : (
         <>
           <Header />
           <div className="app__body">
@@ -41,8 +42,6 @@ function App() {
             <Feed />
           </div>
         </>
-      ) : (
-        <Login />
       )}
     </div>
   );
