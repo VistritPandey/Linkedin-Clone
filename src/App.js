@@ -19,9 +19,9 @@ function App() {
         dispatch(
           login({
             id: authUser.id,
-            photo: authUser.photoURL,
+            photoUrl: authUser.photoURL,
             email: authUser.email,
-            displayName: authUser.displayName,
+            name: authUser.name,
           })
         );
       } else {
