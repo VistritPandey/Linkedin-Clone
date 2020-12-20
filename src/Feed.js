@@ -67,13 +67,13 @@ function Feed() {
           />
         </div>
       </div>
-      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+      {posts.map(({ id, data: { name, message, photoUrl, timestamp } }) => (
         <Post
           key={id}
           name={name}
-          description={description}
           message={message}
           photoUrl={photoUrl}
+          timestamp={timestamp}
         />
       ))}
     </div>

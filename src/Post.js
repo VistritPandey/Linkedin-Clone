@@ -7,14 +7,14 @@ import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 
-function Post({ name, description, message, photoUrl }) {
+function Post({ name, message, photoUrl, timestamp }) {
   return (
     <div className="post">
       <div className="post__header">
         <Avatar src={photoUrl} />
         <div className="post__info">
           <h2>{name}</h2>
-          <p>{description}</p>
+          <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
         </div>
       </div>
       <div className="post__body">
