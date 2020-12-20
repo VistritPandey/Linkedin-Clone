@@ -16,7 +16,7 @@
 
 .login > button {
     width: 300px;
-    background-color: lightblue;
+    background-color: rgb(59, 59, 140);
     color: #eff2f5;
     font-weight: 800;
   }

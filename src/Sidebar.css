@@ -102,3 +102,10 @@
     font-size: 13px;
     padding-bottom: 10px;
 }
+
+.sidebar__logout > button {
+    width: 300px;
+    background-color: rgb(174, 25, 25);
+    color: #eff2f5;
+    font-weight: 800;
+}

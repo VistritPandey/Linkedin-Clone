@@ -1,4 +1,4 @@
-import { Avatar } from "@material-ui/core";
+import { Avatar, Button } from "@material-ui/core";
 import React from "react";
 import "./Sidebar.css";
 
@@ -37,6 +37,9 @@ function Sidebar() {
         {recentItem("Study")}
         {recentItem("Future Stuff")}
         {recentItem("Technology")}
+      </div>
+      <div className="sidebar__logout">
+        <Button> Logout </Button>
       </div>
     </div>
   );
