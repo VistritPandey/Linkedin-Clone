@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
 import { db } from "./Firebase";
 import firebase from "firebase";
+import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 
 function Feed() {
   const user = useSelector(selectUser);
@@ -55,7 +56,7 @@ function Feed() {
               placeholder="Post something"
             />
             <button onClick={sendPost} className="light" type="submit">
-              Post
+              <SendOutlinedIcon color="lightblue" />
             </button>
           </form>
         </div>

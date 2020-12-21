@@ -6,7 +6,6 @@ import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
-import { auth } from "./Firebase";
 import { selectUser } from "./features/userSlice";
 import { useSelector } from "react-redux";
 
