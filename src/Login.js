@@ -14,7 +14,7 @@ function Login() {
         src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2011%E2%80%932019.png"
         alt=""
       />
-      <Button onClick={signIn}>Login In</Button>
+      <Button onClick={signIn}>Sign In</Button>
     </div>
   );
 }
