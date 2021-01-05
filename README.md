@@ -1,6 +1,7 @@
 # Deployed at: https://vistrit-linkedin.web.app
 ## CONFIG FILE REMOVED FROM Firebase.js , if you want it to run it on your local machine, get a new CONFIG File from Firebase Settings
-![](https://komarev.com/ghpvc/?username=VistritPandey/Linkedin-Clone)
+# ![](https://komarev.com/ghpvc/?username=VistritPandey)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
