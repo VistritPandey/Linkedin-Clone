@@ -1,4 +1,3 @@
-//Trying redux for user authentication and saving the state @VistritPandey 09/25/2022
 import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice = createSlice({
